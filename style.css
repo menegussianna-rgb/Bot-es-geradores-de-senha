@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+
+    color: #fff;
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card {
+    background: #ffffff;
+    color: #1e293b;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.password-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.password-area input {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+
+    background: #f8fafc;
+}
+
+.password-area input:focus {
+    border-color: #2563eb;
+}
+
+.password-area button {
+    width: 55px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.password-area button:hover {
+    background: #1d4ed8;
+}
+
+#copyMessage {
+    height: 20px;
+    color: #16a34a;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.setting label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#lengthValue {
+    color: #2563eb;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.checkbox:hover {
+    background: #eff6ff;
+}
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+.strength {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.strength-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.strength-bar {
+    height: 10px;
+
+    background: #e2e8f0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#strengthProgress {
+    height: 100%;
+    width: 0;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.generate {
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 16px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.generate:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .password-area button {
+        width: 50px;
+    }
+}
