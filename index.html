@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <section class="card">
+
+            <h1>🔐 Gerador de Senhas</h1>
+
+            <p class="description">
+                Crie uma senha forte e segura para proteger suas contas.
+            </p>
+
+            <div class="password-area">
+                <input
+                    type="text"
+                    id="password"
+                    placeholder="Sua senha aparecerá aqui"
+                    readonly
+                >
+
+                <button id="copyButton" title="Copiar senha">
+                    📋
+                </button>
+            </div>
+
+            <div id="copyMessage"></div>
+
+            <div class="settings">
+
+                <div class="setting">
+                    <label for="length">
+                        Tamanho da senha:
+                        <strong id="lengthValue">12</strong>
+                    </label>
+
+                    <input
+                        type="range"
+                        id="length"
+                        min="4"
+                        max="32"
+                        value="12"
+                    >
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="uppercase" checked>
+                    Letras maiúsculas (A-Z)
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="lowercase" checked>
+                    Letras minúsculas (a-z)
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="numbers" checked>
+                    Números (0-9)
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="symbols" checked>
+                    Caracteres especiais (!@#$)
+                </label>
+
+            </div>
+
+            <div class="strength">
+
+                <div class="strength-header">
+                    <span>Força da senha</span>
+                    <strong id="strengthText">-</strong>
+                </div>
+
+                <div class="strength-bar">
+                    <div id="strengthProgress"></div>
+                </div>
+
+            </div>
+
+            <button id="generateButton" class="generate">
+                🔄 Gerar nova senha
+            </button>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
